@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center">Items</h2>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Search items..." ng-model="searchText">
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in items | filter:searchText">
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.category }}</td>
+                    <td>{{ item.status }}</td>
+                    <td>
+                        <button class="btn btn-info" ng-click="viewItem(item._id)">View</button>
+                        <button class="btn btn-danger" ng-click="deleteItem(item._id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
