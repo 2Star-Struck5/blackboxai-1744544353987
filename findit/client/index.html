@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="findItApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIt - Lost It? FindIt</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <script src="app/controllers/registerController.js"></script>
+    <script src="app/controllers/itemsController.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/itemService.js"></script>
+    <script src="app/interceptors/authInterceptor.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">FindIt - Lost It? FindIt</h1>
+        <div ng-view></div>
+    </div>
+</body>
+</html>
