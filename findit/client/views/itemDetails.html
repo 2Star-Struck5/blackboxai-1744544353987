@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>{{ item.title }}</h2>
+        <p><strong>Description:</strong> {{ item.description }}</p>
+        <p><strong>Category:</strong> {{ item.category }}</p>
+        <p><strong>Status:</strong> {{ item.status }}</p>
+        <p><strong>Location:</strong> {{ item.location }}</p>
+        <p><strong>Date:</strong> {{ item.date | date:'medium' }}</p>
+        <div>
+            <strong>Images:</strong>
+            <div ng-repeat="image in item.images">
+                <img ng-src="{{ image }}" alt="Item Image" class="img-thumbnail" style="max-width: 200px; margin: 5px;">
+            </div>
+        </div>
+        <button class="btn btn-primary" ng-click="claimItem(item._id)">Claim Item</button>
+        <a href="#/items" class="btn btn-secondary">Back to Items</a>
+    </div>
+</div>
